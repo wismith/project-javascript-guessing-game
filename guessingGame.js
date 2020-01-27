@@ -1,6 +1,7 @@
 let newGuessingGame = require('./lib/newGuessingGame');
 let guessingGameMakeGuess = require('./lib/guessingGameMakeGuess');
 let guessingGameIsDone = require('./lib/guessingGameIsDone');
+let readline-Sync = require('readline-sync');
 
 let wordToGuess = 'hello';
 
