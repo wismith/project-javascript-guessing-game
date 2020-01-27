@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "description": "JavaScript template",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "readline-sync": "^1.4.10"
+  },
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",
@@ -15,8 +18,9 @@
   },
   "scripts": {
     "docs": "npx jsdoc -c ./.jsdoc.conf.json",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint ."
+    "test": "for file in ./tests/*.test.js;do echo \"Running tests in ${file}\"; node \"${file}\";echo;done",
+    "lint": "npx eslint .",
+    "start": "node guessingGame.js"
   },
   "repository": {
     "type": "git",
