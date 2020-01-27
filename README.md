@@ -1,2 +1,1 @@
-# JavaScript Template
-
+# Guessing Game
