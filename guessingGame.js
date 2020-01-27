@@ -26,7 +26,7 @@ for (let letter of wordToGuess) {
 while (guessingGameIsDone(game) === false){
   let guess = readlineSync.question(' Guess a letter: ');
   guessingGameMakeGuess(game,guess);
-  console.log(`Current word is ${game.currentWord}`);
+  console.log(`\n Current word is ${game.currentWord}`);
   console.log();
 }
 
