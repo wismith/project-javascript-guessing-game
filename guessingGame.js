@@ -35,8 +35,11 @@ while (guessingGameIsDone(game) === false){
 let isGameDone = guessingGameIsDone(game);
 
 // console.log(`We have guessed every letter in ${wordToGuess}.`);
-console.log(`The game is done? ${isGameDone}`);
-console.log(`How many turns did we take? ${game.numGuesses}`);
+
+if (isGameDone === true){
+  console.log(`Congratulations ${name}, you have won the guessing game!`);
+  console.log(`You took ${game.numGuesses} turns to win.`);
+}
 
 // // The code below is commented out because it will run
 // // forever until you correctly imlpement the guessingGameMakeGuess
