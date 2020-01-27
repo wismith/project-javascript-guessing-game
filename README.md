@@ -113,7 +113,7 @@ let secretInput = readlineSync.question('Enter a secret word: ', { hideEchoBack:
 console.log(`You entered: ${secretInput}`);
 ```
 
-The [readline-sync README][github-readline-sync] has many examples.
+We have an example of this type of "hidden input" in our collection of [JavaScript Examples][jfarmer-javascript-examples]. The [readline-sync README][github-readline-sync] also has many examples.
 
 Use this to get the target word dynamically and create a new guessing game with that target word.
 
@@ -132,3 +132,4 @@ Think of some ways to improve the UI and implement them. Some ideas:
 
 [github-readline-sync]: https://github.com/anseki/readline-sync#readme
 [github-chalk]: https://github.com/chalk/chalk#readme
+[jfarmer-javascript-examples]: https://github.com/jfarmer/examples-javascript
