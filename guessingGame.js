@@ -3,14 +3,11 @@ let guessingGameMakeGuess = require('./lib/guessingGameMakeGuess');
 let guessingGameIsDone = require('./lib/guessingGameIsDone');
 let readlineSync = require('readline-sync');
 
-let wordToGuess = 'hello';
-
 let game = newGuessingGame('hello');
 
 // console.log(`"Guessing" the word '${wordToGuess}', one letter at a time.`);
 let name = readlineSync.question('\n Hello! What is your name? ');
 console.log(`\n We're going to play a guessing game, ${name}!\n`);
-
 
 /*
 for (let letter of wordToGuess) {
@@ -23,20 +20,19 @@ for (let letter of wordToGuess) {
 }
 */
 
-while (guessingGameIsDone(game) === false){
+while (!guessingGameIsDone(game)) {
   let guess = readlineSync.question(' Guess a letter: ');
-  guessingGameMakeGuess(game,guess);
-  console.log(`\n Current word is ${game.currentWord}`);
+  guessingGameMakeGuess(game, guess);
+  console.log();
+  console.log(` Current word is ${game.currentWord}`);
   console.log();
 }
-
-
 
 let isGameDone = guessingGameIsDone(game);
 
 // console.log(`We have guessed every letter in ${wordToGuess}.`);
 
-if (isGameDone === true){
+if (isGameDone) {
   console.log(`Congratulations ${name}, you have won the guessing game!`);
   console.log(`You took ${game.numGuesses} turns to win.`);
 }
